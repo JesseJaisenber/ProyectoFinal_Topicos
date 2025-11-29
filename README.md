@@ -1,7 +1,3 @@
-¡Claro! 😄 Aquí tienes un README listo para GitHub, escrito de forma clara y sencilla, como si lo hiciera un estudiante:
-
----
-
 # SubTracker
 
 SubTracker es una aplicación para llevar el control de tus suscripciones y ver cuánto gastas al mes.
