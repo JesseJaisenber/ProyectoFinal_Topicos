@@ -1,3 +1,7 @@
+# Proyecto Final
+Lisandro Adolfo Cantarero Girón - 20201001693
+Angel Oved Martinez Galindo - 20211930086
+
 # SubTracker
 
 SubTracker es una aplicación para llevar el control de tus suscripciones y ver cuánto gastas al mes.
@@ -10,7 +14,7 @@ Puedes agregar, editar o eliminar tus suscripciones, y los datos se guardan auto
 
 ## Requisitos
 
-* Node.js (v18 o superior recomendado)
+* Node.js
 * npm
 
 ## Cómo levantar el proyecto
@@ -24,7 +28,7 @@ cd 07-Proyecto-api
 npm install
 ```
 
-2. Configura el `.env` (ya incluido, pero revisa la ruta si cambiaste algo):
+2. Configura el `.env`:
 
 ```
 DATABASE_URL="file:./prisma/dev.db"
