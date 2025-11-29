@@ -1,73 +1,87 @@
-SubTracker
+¡Claro! 😄 Aquí tienes un README listo para GitHub, escrito de forma clara y sencilla, como si lo hiciera un estudiante:
+
+---
+
+# SubTracker
 
 SubTracker es una aplicación para llevar el control de tus suscripciones y ver cuánto gastas al mes.
 Puedes agregar, editar o eliminar tus suscripciones, y los datos se guardan automáticamente aunque cierres la página.
 
-Estructura del proyecto
+## Estructura del proyecto
 
-07-Proyecto → Frontend (Vue 3 + TypeScript + Tailwind)
+* **07-Proyecto** → Frontend (Vue 3 + TypeScript + Tailwind)
+* **07-Proyecto-api** → Backend (Express + TypeScript + Prisma + SQLite)
 
-07-Proyecto-api → Backend (Express + TypeScript + Prisma + SQLite)
+## Requisitos
 
-Requisitos
+* Node.js (v18 o superior recomendado)
+* npm
 
-Node.js (v18 o superior recomendado)
+## Cómo levantar el proyecto
 
-npm
+### 1️⃣ Backend (API con SQLite)
 
-Cómo levantar el proyecto
-1️⃣ Backend (API con SQLite)
+1. Abre una terminal en `07-Proyecto-api`:
 
-Abre una terminal en 07-Proyecto-api:
-
+```bash
 cd 07-Proyecto-api
 npm install
+```
 
+2. Configura el `.env` (ya incluido, pero revisa la ruta si cambiaste algo):
 
-Configura el .env (ya incluido, pero revisa la ruta si cambiaste algo):
-
+```
 DATABASE_URL="file:./prisma/dev.db"
 PORT=4000
+```
 
+3. Crea la base de datos y aplica la migración:
 
-Crea la base de datos y aplica la migración:
-
+```bash
 npx prisma migrate dev --name init
+```
 
+4. Levanta el backend:
 
-Levanta el backend:
-
+```bash
 npm run dev
+```
 
+* El API quedará corriendo en `http://localhost:4000`.
 
-El API quedará corriendo en http://localhost:4000.
+---
 
-2️⃣ Frontend (Vue)
+### 2️⃣ Frontend (Vue)
 
-Abre otra terminal en 07-Proyecto:
+1. Abre otra terminal en `07-Proyecto`:
 
+```bash
 cd 07-Proyecto
 npm install
+```
 
+2. Configura el `.env` para que apunte al backend:
 
-Configura el .env para que apunte al backend:
-
+```
 VITE_API_URL=http://localhost:4000
+```
 
+3. Levanta el frontend:
 
-Levanta el frontend:
-
+```bash
 npm run dev
+```
 
+* Abre la URL que te muestre Vite (por defecto `http://localhost:5173`) en tu navegador.
 
-Abre la URL que te muestre Vite (por defecto http://localhost:5173) en tu navegador.
+---
 
-Funcionalidades
+## Funcionalidades
 
-Crear, editar y eliminar suscripciones.
+* Crear, editar y eliminar suscripciones.
+* Mostrar todas las suscripciones existentes.
+* Calcular automáticamente el **gasto mensual total** normalizado.
+* Persistencia de datos usando SQLite, así que los datos permanecen aunque recargues la página o reinicies el backend.
 
-Mostrar todas las suscripciones existentes.
+---
 
-Calcular automáticamente el gasto mensual total normalizado.
-
-Persistencia de datos usando SQLite, así que los datos permanecen aunque recargues la página o reinicies el backend.
